@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TIENDA LUCI</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+	<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+	<link rel="icon" th:href="@{img/LuciIcon.png}" type="image/png">
+	<link rel="stylesheet" th:href="@{/style.css}">
+	<link rel="icon" type="image/png" th:href="@{/images/icons/favicon.ico}" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animate/animate.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animsition/css/animsition.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/select2/select2.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/daterangepicker/daterangepicker.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+</head>
+
+<body>
+	<header th:insert="fragmentos/header.html::menu-principal">
+		
+	</header>
+	<section class="header-top">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4">
+					<div class="icon">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-wifi"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<title>Menu Desplegable</title>
+	<style th:insert="fragmentos/style.html">
+		
+	</style> 
+	<section class="slider">
+		<img th:src="@{/img/logos6.jpg}" alt="Slider">
+	</section>
+	<section class="team">
+		<div class="clear"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>P R O D U C T O S</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/leche_santaclara.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Leche Santa Clara</h3>
+					<p>Deslactosada de 1L</p>
+					<p>$27</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/aceite123.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Aceite 123</h3>
+					<p>123 de 1L</p>
+					<p>$27</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/quesoamarillo.png}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Queso Amarrillo</h3>
+					<p>Philadelphia de 144g</p>
+					<p>$27</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/jamonFut.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Jamon Fut</h3>
+					<p>Pavo virginia de 290g</p>
+					<p>$30</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/sevilletas2.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Servilletas</h3>
+					<p>Elite ultra de 50 hojas</p>
+					<p>$50</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/123.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Jabon Liquido</h3>
+					<p>Blanca nieves de 1L</p>
+					<p>$67</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/panparamabbursas.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Pan de Hambuersas</h3>
+					<p>Best Choise de 8pz</p>
+					<p>$70</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/choko.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Cereal</h3>
+					<p>Choko Krispis de 620g</p>
+					<p>$100</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="team">
+		<div class="clear"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2> M Á S V E N D I D O S</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/tostadascharras.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Tostdas charras</h3>
+
+					<p>$27</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/Salchichas.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Salchicas</h3>
+
+					<p>$24</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/kinderdelis.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Kinder Sorpresa</h3>
+
+					<p>$30</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/masapan.png}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Mazapan</h3>
+					<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+					<p>$5.50</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/licores1.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Vino piojosa</h3>
+					<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+					<p>$200</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/licores2.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Vino Beronia</h3>
+					<p>$150/p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/pinol1.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Pinol</h3>
+
+					<p>$21</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/choko.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Cereal</h3>
+
+					<p>$100</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer_top">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-4">
+						<div class="footer-contact">
+							<h2>C O N T A C T A N O S</h2>
+							<a href="#">
+								<p><i class="fa fa-map-marker" aria-hidden="true"></i>Angel de la
+									Indepencia,Nezahualcoyotl</p>
+							</a>
+							<a href="#">
+								<p><i class="fa fa-phone" aria-hidden="true"></i>+52 5564673255</p>
+							</a>
+							<a href="#">
+								<p><i class="fa fa-envelope" aria-hidden="true"></i>tiendaluci@gmail.com</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="footer_overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="copy_txt">
+							<p>Copyright © 2014 TIENDA ABARROTES LUCI</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		</div>
+	</footer>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+	<script th:src="@{/js/active.js}"></script>
+</body>
+
+</html>
