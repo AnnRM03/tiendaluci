@@ -22,7 +22,7 @@ public class EmpleadosController {
 	@GetMapping("/index")
 	public String mostrarIndex(Model model) {
 		List<Empleado> empleados = serviceEmpleados.obtenerEmpleado();
-		model.addAttribute("empleados", empleados);
+		model.addAttribute("empleado", empleados);
 		model.addAttribute("total", serviceEmpleados.numeroEmpleado());
 		return"empleados/listaEmpleados";
 	}
