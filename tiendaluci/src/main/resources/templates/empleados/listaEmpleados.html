@@ -64,7 +64,7 @@
                 </tr>
               </thead>
               <tbody>
-                  <tr th:each="empleado : ${empleado}">
+                  <tr th:each="empleado : ${empleados}">
                   <th scope="row" th:text="${empleado.id_emp}"></th>
                   <td th:text="${categoria.nombre}"></td>
                   <td th:text="${categoria.a_paterno}"></td>
