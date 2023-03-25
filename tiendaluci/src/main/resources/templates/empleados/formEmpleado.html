@@ -86,70 +86,71 @@
 
         <div class="card">
                      
-          <div class="card-body">
-            <form method="post" th:action="@{/empleados/guardar}" th:object="${empleado}">              
-              <div class="row">
-                <div class="col-md-6"> 
-                  <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="hidden" th:field="*{id_emp}">
-                    <input type="text" class="form-control" th:field="*{nombre}" id="nombre" name="nombre" placeholder="Escriba el nombre" required="required">
-                  </div>
-                </div>                
-              </div> 
-              <div class="col-md-3"> 
-                  <div class="form-group">
-                    <label for="nombre">Apellido paterno</label>
-                    <input type="text" class="form-control" th:field="*{a_paterno}" id="nombre" name="nombre" placeholder="Escriba el apellido materno" required="required">
-                  </div>
-                </div>                
-              </div>
-              <div class="col-md-9"> 
-                  <div class="form-group">
-                    <label for="nombre">Apellido materno</label>
-                    <input type="text" class="form-control" th:field="*{a_materno}" id="nombre" name="nombre" placeholder="Escriba el apellido paterno" required="required">
-                  </div>
-                </div>                
-              </div>
-              <div class="col-md-3"> 
-                  <div class="form-group">
-                    <label for="nombre">Correo electronico</label>
-                    <input type="text" class="form-control" th:field="*{correo}" id="nombre" name="nombre" placeholder="Escriba el correo electronico" required="required">
-                  </div>
-                </div>                
-              </div>
-              <div class="col-md-3"> 
-                  <div class="form-group">
-                    <label for="nombre">Número de teléfono</label>
-                    <input type="text" class="form-control" th:field="*{num_tel}" id="nombre" name="nombre" placeholder="Escriba el número de teléfono" required="required">
-                  </div>
-                </div>                
-              </div>
-              <div class="col-md-3"> 
-                  <div class="form-group">
-                    <label for="nombre">Cargo</label>
-                    <input type="text" class="form-control" th:field="*{cargo}" id="nombre" name="nombre" placeholder="Escriba el cargo" required="required">
-                  </div>
-                </div>                
-              </div>
-              <div class="col-md-3"> 
-                  <div class="form-group">
-                    <label for="nombre">Edad</label>
-                    <input type="text" class="form-control" th:field="*{edad}" id="nombre" name="nombre" placeholder="Escriba la edad" required="required">
-                  </div>
-                </div>                
-              </div>
-              <div class="col-md-3"> 
-                  <div class="form-group">
-                    <label for="nombre">Sexo</label>
-                    <input type="text" class="form-control" th:field="*{sexo}" id="nombre" name="nombre" placeholder="Maculino o Femenino" required="required">
-                  </div>
-                </div>                
-              </div>
-              <hr>
-              <button type="submit" title="Guardar el registro." class="btn btn-primary">Guardar</button>  
-            </form>
-          </div>
+		<div class="card-body">
+			<form method="post" th:action="@{/empleados/guardar}" th:object="${empleado}">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="nombre">Nombre</label>
+							<input type="hidden" th:field="*{id_emp}">
+							<input type="text" class="form-control" th:field="*{nombre}" id="nombre" name="nombre"
+								placeholder="Escriba el nombre" required="required">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="nombre">Apellido paterno</label>
+							<input type="text" class="form-control" th:field="*{a_paterno}" id="nombre" name="nombre"
+								placeholder="Escriba el apellido paterno" required="required">
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="form-group">
+							<label for="nombre">Apellido materno</label>
+							<input type="text" class="form-control" th:field="*{a_materno}" id="nombre" name="nombre"
+								placeholder="Escriba el apellido materno" required="required">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="nombre">Correo electronico</label>
+							<input type="text" class="form-control" th:field="*{correo}" id="nombre" name="nombre"
+								placeholder="Escriba el correo electronico" required="required">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="nombre">Número de teléfono</label>
+							<input type="text" class="form-control" th:field="*{num_tel}" id="nombre" name="nombre"
+								placeholder="Escriba el número de teléfono" required="required">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="nombre">Cargo</label>
+							<input type="text" class="form-control" th:field="*{cargo}" id="nombre" name="nombre"
+								placeholder="Escriba el cargo" required="required">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="nombre">Edad</label>
+							<input type="text" class="form-control" th:field="*{edad}" id="nombre" name="nombre"
+								placeholder="Escriba la edad" required="required">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="nombre">Sexo</label>
+							<input type="text" class="form-control" th:field="*{sexo}" id="nombre" name="nombre"
+								placeholder="Maculino o Femenino" required="required">
+						</div>
+					</div>
+				</div>
+		<hr>
+		<button type="submit" title="Guardar el registro." class="btn btn-primary">Guardar</button>
+		</form>
+		</div>
         </div>
       </div> <!-- /container -->
 
