@@ -58,7 +58,7 @@ public class ProductosController {
 		List<Producto> productos = serviceProductos.obtenerProductos();
 		model.addAttribute("productos", productos);
 		model.addAttribute("total", serviceProductos.numeroProductos());
-		return "productos/listaProductos";
+		return "Productos/listaProductos";
 	}
 
 }
