@@ -70,10 +70,6 @@
                   <td th:text="${categoria.a_paterno}"></td>
                   <td th:text="${categoria.a_materno}"></td>
                   <td th:text="${categoria.correo}"></td>
-                  <td th:text="${categoria.num_tel}"></td>
-                  <td th:text="${categoria.cargo}"></td>
-                  <td th:text="${categoria.edad}"></td>
-                  <td th:text="${categoria.sexo}"></td>
                   <td>
 					<a th:href="@{/empleados/buscar(id=${empleado.id_emp})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
 					<a th:href="@{/empleados/eliminar(id=${empleado.id_emp})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
