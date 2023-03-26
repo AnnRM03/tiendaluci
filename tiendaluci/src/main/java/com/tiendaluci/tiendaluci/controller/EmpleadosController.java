@@ -27,16 +27,20 @@ public class EmpleadosController {
 		return"empleados/listaEmpleados";
 	}
 	
+	
 	@PostMapping("/guardar")
-	public String guardar (Empleado empleado) {
+	public String guardar (Empleado empleado, RedirectAttributes model) {
 		serviceEmpleados.guardar(empleado);
 		return "redirect:/empleados/index";
 	}
 	
+	
 	@GetMapping("/nueva")
-	public String nuevoEmpleado(Empleado empleado) {
+	public String nuevoEmpleado(Empleado empleado, Model model) {
+		model.addAttribute("empleados", serviceEmpleados.obtenerEmpleado());
 		return "empleados/formEmpleado";
 	}
+	
 	
 	@GetMapping("/eliminar")
 	public String eliminarEmpleado(@RequestParam("id")int idEmpleado,RedirectAttributes model) {
@@ -45,10 +49,12 @@ public class EmpleadosController {
 		return "redirect:/empleados/index";
 	}
 	
+	
 	@GetMapping("/buscar")
 	public String modificarEmpleado(@RequestParam("id")int idEmpleado,Model model) {
 		Empleado empleado=serviceEmpleados.buscarPorId(idEmpleado);
 		model.addAttribute("empleado", empleado);
 		return "empleados/formEmpleado";
 	}
+	
 }
