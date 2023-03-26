@@ -47,28 +47,20 @@
           <h4 class="card-header"><strong>Listado de Promociones</strong></h4>  <br>
 
           <div class="card-body">
-            <a class="btn btn-primary" th:href="@{/promociones/nueva}" title="Crear nueva promocion" role="button"><i class="fas fa-file" aria-hidden="true"></i> Nueva</a>            
+            <a class="btn btn-primary" th:href="@{/eomeados/nueva}" title="Crear nueva promocion" role="button"><i class="fas fa-file" aria-hidden="true"></i> Nueva</a>            
             <hr>
             <table class="table table-hover">
               <thead class="thead-light">
                 <tr>
                 <th scope="col">Id</th>
                   <th scope="col">Nombre</th> 
-                  <th scope="col">Detalle</th>
-                  <th scope="col">Descripcion</th>                                   
-                  <th scope="col">Fecha Inicio.</th>
-                  <th scope="col">Fecha Termino.</th>
                   <th scope="col">Operaciones</th>
                 </tr>
               </thead>
               <tbody>
-                <tr th:each="promocion : ${promociones}">
-                  <th scope="row" th:text="${promocion.id_prom}"></th>
-                  <td th:text="${promocion.nombre}"></td>
-                  <td th:text="${promocion.detalle}"></td>
-                  <td th:text="${promocion.descripcion}"></td>
-                  <td th:text="${promocion.fecha_inicio}"></td>
-                  <td th:text="${promocion.fecha_final}"></td>
+                <tr th:each="empleado : ${empleados}">
+                  <th scope="row" th:text="${empleado.id_emp}"></th>
+                  <td th:text="${empleado.nombre}"></td>
                   <td>
 					<a th:href="@{/promociones/buscar(id=${promocion.id_prom})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
 					<a th:href="@{/promociones/eliminar(id=${promocion.id_prom})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
