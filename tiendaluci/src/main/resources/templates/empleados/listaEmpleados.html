@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+ <head>
     <meta charset="UTF-8">
     <title>TIENDA LUCI|Tienda de aborrotes</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -35,37 +35,46 @@
   </head>
   <body style="background-image: url('/img/naranja.jpg');">
 	  
- <header th:insert="fragmentos/menu.html::menu-principal">
+  <header th:insert="fragmentos/menu.html::menu-principal">
 		
 	</header>
-	
-    <main role="main" >     
+
+    <main role="main">     
       <hr>
       <div class="container"> 
 
         <div class="card">
-          <h4 class="card-header"><strong>Listado de Categorías</strong></h4>              
+          <h4 class="card-header"><strong>Listado de Promociones</strong></h4>  <br>
+
           <div class="card-body">
-            <a class="btn btn-primary" th:href="@{/empleados/nueva}"  role="button"><i class="fas fa-file" aria-hidden="true"></i> Nueva</a>            
+            <a class="btn btn-primary" th:href="@{/promociones/nueva}" title="Crear nueva promocion" role="button"><i class="fas fa-file" aria-hidden="true"></i> Nueva</a>            
             <hr>
             <table class="table table-hover">
               <thead class="thead-light">
                 <tr>
-                  <th scope="col">Id</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Detalles</th>
+                <th scope="col">Id</th>
+                  <th scope="col">Nombre</th> 
+                  <th scope="col">Detalle</th>
+                  <th scope="col">Descripcion</th>                                   
+                  <th scope="col">Fecha Inicio.</th>
+                  <th scope="col">Fecha Termino.</th>
                   <th scope="col">Operaciones</th>
                 </tr>
               </thead>
               <tbody>
-                  <tr th:each="empleado : ${empleados}">
-                  <th scope="row" th:text="${empleado.id_emp}"></th>
-                  <td th:text="${empleado.nombre}"></td>
+                <tr th:each="promocion : ${promociones}">
+                  <th scope="row" th:text="${promocion.id_prom}"></th>
+                  <td th:text="${promocion.nombre}"></td>
+                  <td th:text="${promocion.detalle}"></td>
+                  <td th:text="${promocion.descripcion}"></td>
+                  <td th:text="${promocion.fecha_inicio}"></td>
+                  <td th:text="${promocion.fecha_final}"></td>
                   <td>
-					<a th:href="@{/empleados/buscar(id=${categoria.id_emp})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
-					<a th:href="@{/empleados/eliminar(id=${categoria.id_emp})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
-                  </td>
-                </tr>         
+					<a th:href="@{/promociones/buscar(id=${promocion.id_prom})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+					<a th:href="@{/promociones/eliminar(id=${promocion.id_prom})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
+				</td>
+                </tr>
+                </tr>             
               </tbody>
             </table>
             <tfoot>
@@ -79,6 +88,7 @@
 
     </main>
 
+  
     <footer class="footer">
       <div class="container">
         <p>
@@ -92,6 +102,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>     
+    <script src="bootstrap/js/bootstrap.min.js"></script>     
   </body>
 </html>
