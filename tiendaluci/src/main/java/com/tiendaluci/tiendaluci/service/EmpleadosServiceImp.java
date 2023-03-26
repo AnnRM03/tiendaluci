@@ -4,11 +4,9 @@ import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
 
 import com.tiendaluci.tiendaluci.entity.Empleado;
 
-@Service
 public class EmpleadosServiceImp implements IntServiceEmpleados {
 
 	private List<Empleado> empleados = null;
