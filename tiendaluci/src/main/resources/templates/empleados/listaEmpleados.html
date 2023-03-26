@@ -62,8 +62,8 @@
                   <th scope="row" th:text="${empleado.id_emp}"></th>
                   <td th:text="${empleado.nombre}"></td>
                   <td>
-					<a th:href="@{/categorias/buscar(id=${categoria.id_cat})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
-					<a th:href="@{/categorias/eliminar(id=${categoria.id_cat})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
+					<a th:href="@{/empleados/buscar(id=${categoria.id_emp})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+					<a th:href="@{/empleados/eliminar(id=${categoria.id_emp})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
                   </td>
                 </tr>         
               </tbody>
