@@ -76,4 +76,9 @@ public class HomeController {
 		model.addAttribute("productos", lista);
 		return "index";
 	}
+	
+	@GetMapping("/promociones")
+	public String mostrarPromociones() {
+		return "promociones";
+	}
 }
