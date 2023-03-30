@@ -77,7 +77,7 @@ public class HomeController {
 		return "index";
 	}
 	
-	@GetMapping("/promociones")
+	@GetMapping("/indexpromo")
 	public String mostrarPromociones() {
 		return "promociones";
 	}
