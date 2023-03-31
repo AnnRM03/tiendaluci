@@ -20,4 +20,19 @@ public class HomeController {
 		public String mostrarContacto() {
 			return"contact";
 		}
+		
+		@GetMapping("/login")
+		public String mostrarLogin() {
+			return"login";
+		}
+		
+		@GetMapping("/promo")
+		public String mostrarPromo() {
+			return"promociones";
+		}
+		
+		@GetMapping("/registro")
+		public String mostrarRegistro() {
+			return"registro";
+		}
 }
