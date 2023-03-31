@@ -20,7 +20,7 @@ public class UsuariosController {
 	public String mostrarIndex(Model model) {
 		model.addAttribute("usuarios", serviceUsuarios.obtnerUsuarios());
 		System.out.println(serviceUsuarios.obtnerUsuarios());
-		return "usuarios/listaUsuarios";
+		return "usuario/listaUsuarios";
 	}
 
 }
