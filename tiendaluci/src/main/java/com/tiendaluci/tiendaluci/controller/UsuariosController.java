@@ -10,7 +10,7 @@ import com.tiendaluci.tiendaluci.service.IntServiceUsuarios;
 
 @Controller
 
-@RequestMapping("/usuario")
+@RequestMapping("/usuarios")
 public class UsuariosController {
 	
 	@Autowired
