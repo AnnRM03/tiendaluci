@@ -53,7 +53,13 @@
               <thead class="thead-light">
                 <tr>
                 <th scope="col">Id</th>
-                  <th scope="col">Nombre</th> 
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido paterno</th>
+                  <th scope="col">Apellido materno</th>
+                  <th scope="col">Correo</th>
+                  <th scope="col">Cargo</th>
+                  <th scope="col">Edad</th>
+                  <th scope="col">Sexo</th>
                   <th scope="col">Operaciones</th>
                 </tr>
               </thead>
@@ -61,6 +67,13 @@
                 <tr th:each="empleado : ${empleados}">
                   <th scope="row" th:text="${empleado.id_emp}"></th>
                   <td th:text="${empleado.nombre}"></td>
+                  <td th:text="${empleado.a_paterno}"></td>
+                  <td th:text="${empleado.a_materno}"></td>
+                  <td th:text="${empleado.correo}"></td>
+                  <td th:text="${empleado.num_tel}"></td>
+                  <td th:text="${empleado.cargo}"></td>
+                  <td th:text="${empleado.edad}"></td>
+                  <td th:text="${empleado.sexo}"></td>
                   <td>
 					<a th:href="@{/empleados/buscar(id=${empleado.id_emp})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
 					<a th:href="@{/empleados/eliminar(id=${empleado.id_emp})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
