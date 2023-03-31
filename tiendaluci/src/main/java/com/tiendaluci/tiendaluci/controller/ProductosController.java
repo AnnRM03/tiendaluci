@@ -42,7 +42,7 @@ public class ProductosController {
 	@GetMapping("/nueva")
 	public String nuevoProducto(Producto producto, Model model) {
 		model.addAttribute("categorias", serviceCategorias.obtenerCategoria());
-		return "Productos/formProducto";
+		return "productos/formProducto";
 	}
 	
 	@GetMapping("/buscar")
