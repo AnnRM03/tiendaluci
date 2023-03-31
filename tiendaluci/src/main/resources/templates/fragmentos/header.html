@@ -14,15 +14,9 @@
 					</div>
 					<div class="col-md-4">
 					   <div class="a-right">
-						   <div sec:authorize="isAnonymous()">
-				  	<a class="btn btn-primary" th:href="@{/login}">Ingresar</a>&nbsp;
-          			<a class="btn btn-primary" th:href="@{/signup}">Registrarse</a>&nbsp;
-			  </div>
-			  <div sec:authorize="isAuthenticated()">
-				  <span class="text-primaty" style="color: white;"><strong>Bienvenido: </strong></span>&nbsp;
-				  <span sec:authentication="name" style="padding-right: 30px; color: white;"></span>
-				  <a class="btn btn-danger" th:href="@{/logout}">Salir</a>
-			  </div>
+							<a th:href="@{/login/index}"><p><span><i class="fa fa-user"></i></span>Iniciar sesison</p></a>
+							<a th:href="@{/registro/index}"><p><span><i class="fa fa-pencil"></i></span>Registerarse</p></a>
+					   </div>
 					</div>
 				</div>
 			</div>
@@ -174,7 +168,7 @@
 		}
 	</style>
 						<ul class="nav navbar-nav">
-						  <li class="active"><a th:href="@{/}">HOME</a></li>
+						  <li class="active"><a th:href="@{/index/index}">HOME</a></li>
 						  <li class="active"><a href="">Categorias</a>
 							<ul>
 								<li><a href="limpieza.html">LIMPIEZA</a></li>
@@ -185,7 +179,7 @@
 								<li><a href="conservadores.html">CONSERVADORES</a>     
 							</ul>
 								</li>
-						  <li><a th:href="@{/indexpromo}">Promociones</a></li>
+						  <li><a th:href="@{/prom/index}">Promociones</a></li>
 						  <li><a th:href="@{/contacto/index}">Conocenos</a></li>
 						  <li><a th:href="@{/blog/index}">¿Quienes somos?</a></li>
 						 
