@@ -35,7 +35,7 @@
   </head>
   <body style="background-image: url('/img/naranja.jpg');">
 	  
-  <header th:insert="fragmentos/menu.html::menu-principal">
+  <header th:insert="~{fragmentos/menu.html::menu-principal}">
 		
 	</header>
 
@@ -47,7 +47,7 @@
           <h4 class="card-header"><strong>Listado de Promociones</strong></h4>  <br>
 
           <div class="card-body">
-            <a class="btn btn-primary" th:href="@{/eomeados/nueva}" title="Crear nueva promocion" role="button"><i class="fas fa-file" aria-hidden="true"></i> Nueva</a>            
+            <a class="btn btn-primary" th:href="@{/empleados/nueva}" title="Crear nueva promocion" role="button"><i class="fas fa-file" aria-hidden="true"></i> Nueva</a>            
             <hr>
             <table class="table table-hover">
               <thead class="thead-light">
@@ -62,8 +62,8 @@
                   <th scope="row" th:text="${empleado.id_emp}"></th>
                   <td th:text="${empleado.nombre}"></td>
                   <td>
-					<a th:href="@{/promociones/buscar(id=${promocion.id_prom})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
-					<a th:href="@{/promociones/eliminar(id=${promocion.id_prom})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
+					<a th:href="@{/empleados/buscar(id=${empleado.id_emp})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+					<a th:href="@{/empleados/eliminar(id=${empleado.id_emp})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
 				</td>
                 </tr>
                 </tr>             
@@ -94,6 +94,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>     
+    <script src="@{bootstrap/js/bootstrap.min.js}"></script>     
   </body>
 </html>
