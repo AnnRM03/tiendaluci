@@ -31,7 +31,7 @@
 	<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
 </head>
 <body>
-	<header th:insert="~{fragmentos/header.html::menu-principal}">
+	<header th:insert="fragmentos/header.html::menu-principal">
 		
 	</header>
 	<style th:insert="fragmentos/style.html">
@@ -79,12 +79,58 @@
                         minlength="4" maxlength="12" size="10">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
-                    <div class="wrap-input100 validate-input">
+
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Calle:</span>
+						<input class="input100" type="text" name="calle" placeholder="Escribe tu calle" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" >
+						<span class="label-input100">Codigo Postal</span>
+						<input class="input100" type="number" name="postal" placeholder="Escribe tu codigo postal" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" >
+						<span class="label-input100">Colonia</span>
+						<input class="input100" type="text" name="colonia" placeholder="Escribe tu colonia" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" >
+						<span class="label-input100">Numero exterior</span>
+						<input class="input100" type="number" name="numeroExt" placeholder="Escribe tu numero exterior" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+					
+					
+                    <div class="wrap-input100 validate-input" >
+						<span class="label-input100">Numero interior</span>
+						<input class="input100" type="text" name="numeroInte" placeholder="Escribe tu numero interior" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" ">
 						<span class="label-input100">Numero de celular</span>
 						<input class="input100" type="tel" name="celular" placeholder="Tu numero de celular:55-82-45-90" required
                         minlength="10" maxlength="12" >
                       
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" ">
+						<span class="label-input100">Edad</span>
+						<input class="input100" type="number" name="edad" placeholder="Tu edad" required
+                        minlength="10" maxlength="12" >
+                      
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Genero</span>
+						<input class="input100" type="number" name="genero"  required >
+						Femenino: <input type="radio" name="sex" />
+						Masculino: <input type="radio" name="sex" />
 					</div>
                     <br>
                     <br>
