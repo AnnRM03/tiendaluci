@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TIENDA LUCI</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+	<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+	<link rel="icon" th:href="@{img/LuciIcon.png}" type="image/png">
+	<link rel="stylesheet" th:href="@{/style.css}">
+	<link rel="icon" type="image/png" th:href="@{/images/icons/favicon.ico}" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animate/animate.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animsition/css/animsition.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/select2/select2.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/daterangepicker/daterangepicker.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+</head>
+<body>
+	<header th:insert="fragmentos/header.html::menu-principal">
+		
+	</header>
+	<style th:insert="fragmentos/style.html">
+		
+	</style> 
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('/img/degrainicio.jpg');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-49">
+						Registrate
+                        <img th:src="@{/img/LuciIcon.png}"  width="100" height="100" ></img>
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Nombre:</span>
+						<input class="input100" type="text" name="nombre" placeholder="Escribe tu nombre" required
+                        minlength="4" maxlength="8" size="10">
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Apellido paterno:</span>
+						<input class="input100" type="text" name="paterno" placeholder="Escribe tu apellido paterno" required
+                        minlength="4" maxlength="9" size="10">
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Apellido materno:</span>
+						<input class="input100" type="text" name="username" placeholder="Escribe tu apellido materno" required
+                        minlength="4" maxlength="8" size="10">
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Correo:</span>
+						<input class="input100" type="text" name="username" placeholder="Escribe tu correo electronico" required>
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<span class="label-input100">Contraseña</span>
+						<input class="input100" type="password" name="pass" placeholder="Escribe tu contraseña" required
+                        minlength="4" maxlength="12" size="10">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Calle:</span>
+						<input class="input100" type="text" name="calle" placeholder="Escribe tu calle" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" >
+						<span class="label-input100">Codigo Postal</span>
+						<input class="input100" type="number" name="postal" placeholder="Escribe tu codigo postal" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" >
+						<span class="label-input100">Colonia</span>
+						<input class="input100" type="text" name="colonia" placeholder="Escribe tu colonia" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" >
+						<span class="label-input100">Numero exterior</span>
+						<input class="input100" type="number" name="numeroExt" placeholder="Escribe tu numero exterior" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+					
+					
+                    <div class="wrap-input100 validate-input" >
+						<span class="label-input100">Numero interior</span>
+						<input class="input100" type="text" name="numeroInte" placeholder="Escribe tu numero interior" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" ">
+						<span class="label-input100">Numero de celular</span>
+						<input class="input100" type="tel" name="celular" placeholder="Tu numero de celular:55-82-45-90" required
+                        minlength="10" maxlength="12" >
+                      
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" ">
+						<span class="label-input100">Edad</span>
+						<input class="input100" type="number" name="edad" placeholder="Tu edad" required
+                        minlength="10" maxlength="12" >
+                      
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Genero</span>
+						<input class="input100" type="number" name="genero"  required >
+						Femenino: <input type="radio" name="sex" />
+						Masculino: <input type="radio" name="sex" />
+					</div>
+                    <br>
+                    <br>
+                    <div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Registrar
+							</button>
+						</div>
+					</div>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

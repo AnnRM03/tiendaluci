@@ -33,6 +33,6 @@ public class HomeController {
 		
 		@GetMapping("/registro")
 		public String mostrarRegistro() {
-			return"registro";
+			return"registrarse/registro";
 		}
 }
