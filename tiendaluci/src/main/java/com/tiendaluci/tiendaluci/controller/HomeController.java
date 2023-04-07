@@ -31,7 +31,7 @@ public class HomeController {
 			return"promociones";
 		}
 		
-		@GetMapping("/registro")
+		@GetMapping("/registrarse")
 		public String mostrarRegistro() {
 			return"registrarse/registro";
 		}
