@@ -170,11 +170,13 @@
 						<ul class="nav navbar-nav">
 						  <li class="active"><a th:href="@{/}">HOME</a></li>
 						  <li class="active"><a href="">Categorias</a>
-						 
-							<ul th:field="*{categoria.id_cat}">
-								<li><a href="limpieza.html" th:each="categoria: ${categorias}"
-                					th:value="${categoria.id_cat}"
-                      				th:text="${categoria.nombre}"></a></li>    
+							<ul>
+								<li><a href="limpieza.html">LIMPIEZA</a></li>
+								<li><a href="embutidos.html">EMBUTIDOS</a></li>
+								<li><a href="lacteos.html">LACTEOS</a></li>
+								<li><a href="vinos.html">VINOS Y LICORES</a>
+								<li><a href="desechables.html">DESECHABLES</a>
+								<li><a href="conservadores.html">CONSERVADORES</a>     
 							</ul>
 								</li>
 						  <li><a th:href="@{/promo}">Promociones</a></li>
