@@ -57,7 +57,6 @@
 		
 	</style> 
 	<div class="limiter">
-		<form class="form-signin" method="post" th:action="@{/login}">
 		<div class="container-login100" style="background-image: url('/img/degrainicio.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<div class="login100-form validate-form">
@@ -88,7 +87,7 @@
 						<div class="wrap-login100-form-btn">
 							<div   class="login100-form-bgbtn"  ></div>
 							<button class="login100-form-btn" >
-								<a th:href="@{/productos/index}">INICIO SESIÓN</a>
+								<a th:href="@{/categorias/index}">INICIO SESIÓN</a>
 							</button>
 						</div>
 					</div>
@@ -98,7 +97,7 @@
 						<span class="txt1 p-b-17">
 							<h4>O REGISTRATE CON NOSOTROS</h4> 
 						</span>
-						<a th:href="@{/registro/index}" class="txt2">
+						<a th:href="@{/registro}" class="txt2">
 							R E G I S T R A T E
 						</a>
 					</div>
