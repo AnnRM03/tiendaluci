@@ -66,17 +66,221 @@
 					<h2>P R O D U C T O S</h2>
 				</div>
 			</div>
-			<div class="row" th:each="producto:${productos}">
-          <div class="col-md-3">            
-            <img class="rounded mx-auto d-block" th:src="@{/produc/{img}(img=${producto.imagen})}" alt="Generic placeholder image" width="220" height="220">            
-          </div>
-          <div class="col-md-9">
-            <h2 th:text="${producto.nombre}"></h2>
-            <h6 class="card-title"><strong>Categoría: </strong> <span th:text="${producto.categoria.nombre}"></span></h6>             
-            <p th:text="${producto.precio}"></p>
-            <p><a class="btn btn-secondary" th:href="@{/productos/detalle(id=${producto.id_prod})}" role="button">View details &raquo;</a></p>            
-          </div>
-        </div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/leche_santaclara.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Leche Santa Clara</h3>
+					<p>Deslactosada de 1L</p>
+					<p>$27</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/aceite123.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Aceite 123</h3>
+					<p>123 de 1L</p>
+					<p>$27</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/quesoamarillo.png}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Queso Amarrillo</h3>
+					<p>Philadelphia de 144g</p>
+					<p>$27</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/jamonFut.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Jamon Fut</h3>
+					<p>Pavo virginia de 290g</p>
+					<p>$30</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/sevilletas2.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Servilletas</h3>
+					<p>Elite ultra de 50 hojas</p>
+					<p>$50</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/123.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Jabon Liquido</h3>
+					<p>Blanca nieves de 1L</p>
+					<p>$67</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/panparamabbursas.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Pan de Hambuersas</h3>
+					<p>Best Choise de 8pz</p>
+					<p>$70</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/choko.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Cereal</h3>
+					<p>Choko Krispis de 620g</p>
+					<p>$100</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="team">
+		<div class="clear"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2> M Á S V E N D I D O S</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/tostadascharras.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Tostdas charras</h3>
+
+					<p>$27</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/Salchichas.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Salchicas</h3>
+
+					<p>$24</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/kinderdelis.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Kinder Sorpresa</h3>
+
+					<p>$30</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/masapan.png}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Mazapan</h3>
+					<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+					<p>$5.50</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/licores1.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Vino piojosa</h3>
+					<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+					<p>$200</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/licores2.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Vino Beronia</h3>
+					<p>$150/p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/pinol1.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Pinol</h3>
+
+					<p>$21</p>
+				</div>
+				<div class="col-md-3">
+					<div class="teams">
+						<img th:src="@{/img/choko.jpg}">
+						<div class="icon">
+							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<h3>Cereal</h3>
+
+					<p>$100</p>
+				</div>
+			</div>
+		</div>
 	</section>
 	<footer>
 		<div class="footer_top">
