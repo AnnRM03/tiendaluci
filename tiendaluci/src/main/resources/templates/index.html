@@ -66,10 +66,10 @@
 					<h2>P R O D U C T O S</h2>
 				</div>
 			</div>
-			<div class="row"  th:each="proucto:${producto}">
+			<div class="row"  th:each="proucto:${productos}">
 				<div class="col-md-3">
 					<div class="teams">
-						<img th:src="@{/imagenes/{img}(img=${producto.imagen})}">
+						<img th:src="@{/images/{img}(img=${producto.imagen})}">
 						<div class="icon">
 							<a href="#"><i class="fa fa-cart-arrow-down"></i></a>
 						</div>
