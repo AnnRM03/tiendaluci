@@ -1,39 +1,98 @@
 <!doctype html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
-
-    <title>EmpleosApp | Creación de Categorías</title>
-    <!-- Bootstrap core CSS -->
-    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
-    <link th:href="@{/bootstrap/css/sticky-footer-navbar.css}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>TIENDA LUCI|Tienda de aborrotes</title>
+    <link th:href="@{https://fonts.googleapis.com/css?family=Poppins}" rel="stylesheet">
+    <link th:href="@{https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+    <link rel="icon" th:href="@{/img/LuciIcon.png}" type="image/png">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="icon" type="image/png" th:href="@{/images/icons/favicon.ico}"/>
+   
+        <link rel="stylesheet" th:href="@{/css/interfaz.css}" />
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animate/animate.css}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animsition/css/animsition.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/select2/select2.min.css}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/daterangepicker/daterangepicker.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
   </head>
 
   <body>
-
-   <header th:insert="fragmentos/menu.html::menu-principal">
-      
-    </header>
+    <head>
+      <meta charset="UTF-8">
+      <title>TIENDA LUCI</title>
+      <link th:href="@{https://fonts.googleapis.com/css?family=Poppins}" rel="stylesheet">
+      <link th:href="@{https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900}" rel="stylesheet">
+      <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+      <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+      <link rel="icon" th:href="@{/img/LuciIcon.png}" type="image/png">
+      <link rel="stylesheet" th:href="@{/style.css}">
+      <link rel="icon" type="image/png" th:href="@{/images/icons/favicon.ico}"/>
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/animate/animate.css}">
+  <!--===============================================================================================-->	
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/animsition/css/animsition.min.css}">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/select2/select2.min.css}">
+  <!--===============================================================================================-->	
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/daterangepicker/daterangepicker.css}">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+  </head>
+  <body style="background-image: url('/img/naranja.jpg');">
+	  
+  <header th:insert="fragmentos/menu.html::menu-principal">
+		
+	</header>
+              <div class="row">
+                  <div class="col-md-12">
+                     <div class="header-part">   
+                       <h4 class="card-header"><strong>Datos de la categoría</strong></h4> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </header>
 
     <main role="main">     
       <hr>
       <div class="container"> 
 
         <div class="card">
-          <h4 class="card-header"><strong>Datos de la categoría</strong></h4>              
+                     
           <div class="card-body">
             <form method="post" th:action="@{/categorias/guardar}" th:object="${categoria}">              
               <div class="row">
                 <div class="col-md-6"> 
                   <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="hidden" th:field="*{id}"> 
+                    <input type="hidden" th:field="*{id_cat}">
                     <input type="text" class="form-control" th:field="*{nombre}" id="nombre" name="nombre" placeholder="Escriba el nombre de la categoria" required="required">
                   </div>
                 </div>                
@@ -41,8 +100,8 @@
               <div class="row">
                 <div class="col-md-6"> 
                   <div class="form-group">
-                    <label for="descripcion">Descripción</label>
-                    <textarea class="form-control" th:field="*{descripcion}" name="descripcion" id="descripcion" rows="2"></textarea>
+                    <label for="descripcion">Detalles</label>
+                    <textarea class="form-control" name="descripcion" th:field="*{detalles}" id="descripcion" rows="2"></textarea>
                   </div> 
                 </div>                
               </div> 
@@ -55,14 +114,19 @@
 
     </main>
 
-    <footer class="footer" th:insert="fragmentos/pie.html::pie">
-      
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; TIENDA LUCI | &middot; <a href="#">Privacy</a>
+          &middot; <a href="#">Terms</a>
+        </p>
+      </div>
     </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>     
+    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>     
   </body>
 </html>

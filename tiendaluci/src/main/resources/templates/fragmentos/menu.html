@@ -1,42 +1,81 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"  th:fragment="menu-principal">
+<section class="header-top">
+          <div class="container">
+              <div class="row">
+                 
+                  <div class="col-md-4">
+                      <div class="icon">
+                         <a href="#"><i class="fa fa-facebook"></i></a>
+                         <a href="#"><i class="fa fa-twitter"></i></a>
+                         <a href="#"><i class="fa fa-google-plus"></i></a>
+                         <a href="#"><i class="fa fa-linkedin"></i></a>
+                         <a href="#"><i class="fa fa-wifi"></i></a>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="a-right">
+                          <a th:href="@{/}"><p><span><i class="fa fa-user"></i></span>Cerra Sesión</p></a>
+                       
+                     </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <div class="clear"></div>
+      <section class="header">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-3">
+                     <div class="logo">
+                      <a href="index.html"><h2>ABARROTES LUCI</h2></a>
+                      <img th:src="@{/img/LuciIcon.png}"  width="100" height="100" ></img>
+                      
+                     </div>
+                  </div>
+                  <div class="col-md-7">
+                      <ul class="nav navbar-nav">
+                        <h1>Administrador</h1>
+                      
+                     
+                     <li><a th:href="@{/categorias/index}">Categorias</a>
+                        
+                      </li>
 
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" th:fragment="menu-principal">
-        <a class="navbar-brand" href="#">EmpleosApp</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link active" th:href="@{/}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" th:href="@{/acerca}">Acerca</a>
-            </li>
-            <li class="nav-item" sec:authorize="hasAnyAuthority('Administrador','Supervisor')">
-             <a class="nav-link" th:href="@{/categorias/indexPaginado}">Categorias</a>
-            </li>
-            <li class="nav-item" sec:authorize="hasAnyAuthority('Administrador','Supervisor')">
-             <a class="nav-link" th:href="@{/vacantes/indexPaginado}">Vacantes</a>
-            </li> 
-            <li class="nav-item" sec:authorize="hasAnyAuthority('Administrador')">
-             <a class="nav-link" th:href="@{/usuarios/index}">Usuarios</a>
-            </li>
-            <li class="nav-item" sec:authorize="hasAnyAuthority('Administrador')">
-             <a class="nav-link" th:href="@{/perfiles/index}">Perfiles</a>
-            </li>  
-          </ul> 
-          <div class="d-flex" role="search" style="padding-right: 20px;">
-			  <div sec:authorize="isAnonymous()">
-				  	<a class="btn btn-primary" th:href="@{/login}">Ingresar</a>&nbsp;
-          			<a class="btn btn-primary" th:href="@{/signup}">Registrarse</a>&nbsp;
-			  </div>
-			  <div sec:authorize="isAuthenticated()">
-				  <span class="text-primaty" style="color: white;"><strong>Bienvenido: </strong></span>&nbsp;
-				  <span sec:authentication="name" style="padding-right: 30px; color: white;"></span>
-				  <a class="btn btn-danger" th:href="@{/logout}">Salir</a>
-			  </div>
-		  </div>          
+                      <li><a th:href="@{/productos/index}">Productos</a>
+                     
+                      </li>
+                      
+                  
+                      <li><a th:href="@{/promociones/index}">Promociones</a>
+                      
+                      </li>
+                      
+                      <li><a th:href="@{/empleados/index}">Empleados</a>
+                      
+                      </li>
+                      
+                      <li><a th:href="@{/perfiles/index}">Perfiles</a>
+                      
+                      </li>
+                       
+                      </ul>
+                  </div>     
+      </section>
+      <section class="header-top">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-4">
+                    <div class="icon">
+               
+                    </div>
+                </div>
+                <div class="col-md-4">
+                   <div class="a-right">
+                    
+                   </div>
+                </div>
+            </div>
         </div>
-      </nav>
-    
+    </section>
+ </nav>

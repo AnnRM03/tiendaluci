@@ -1,88 +1,92 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
-
-    <title>EmpleosApp | Listado de Categorías</title>
-    <!-- Bootstrap core CSS -->
-    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
-    <link th:href="@{/bootstrap/css/sticky-footer-navbar.css}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>TIENDA LUCI|Tienda de aborrotes</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
     <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+    <link rel="icon" th:href="@{/img/LuciIcon.png}" type="image/png">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="icon" type="image/png" th:href="@{/images/icons/favicon.ico}"/>
+   
+        <link rel="stylesheet" th:href="@{/css/interfaz.css}" />
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animate/animate.css}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/css-hamburgers/hamburgers.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animsition/css/animsition.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/select2/select2.min.css}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/daterangepicker/daterangepicker.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
   </head>
-
-  <body>
-
-    <header th:insert="fragmentos/menu.html::menu-principal">
-      
-    </header>
-
-    <main role="main">     
+  <body style="background-image: url('/img/naranja.jpg');">
+	  
+ <header th:insert="fragmentos/menu.html::menu-principal">
+		
+	</header>
+	
+    <main role="main" >     
       <hr>
       <div class="container"> 
 
         <div class="card">
           <h4 class="card-header"><strong>Listado de Categorías</strong></h4>              
           <div class="card-body">
-            <a class="btn btn-primary" th:href="@{/categorias/nueva}" role="button"><i class="fas fa-file" aria-hidden="true"></i> Nueva</a>            
+            <a class="btn btn-primary" th:href="@{/categorias/nueva}"  role="button"><i class="fas fa-file" aria-hidden="true"></i> Nueva</a>            
             <hr>
-            <div class="alert alert-success" role="alert" th:if="${msg!=null}" th:text="${msg}"></div>
             <table class="table table-hover">
               <thead class="thead-light">
                 <tr>
                   <th scope="col">Id</th>
                   <th scope="col">Nombre</th>
-                  <th scope="col">Descripción</th>
+                  <th scope="col">Detalles</th>
                   <th scope="col">Operaciones</th>
                 </tr>
               </thead>
               <tbody>
-                <tr th:each="categoria : ${categorias}">
-                  <th scope="row" th:text="${categoria.id}"></th>
+                  <tr th:each="categoria : ${categorias}">
+                  <th scope="row" th:text="${categoria.id_cat}"></th>
                   <td th:text="${categoria.nombre}"></td>
-                  <td th:text="${categoria.descripcion}"></td>
+                  <td th:text="${categoria.detalles}"></td>
                   <td>
-                     <a th:href="@{/categorias/buscar(id=${categoria.id})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
-                    <a th:href="@{/categorias/eliminar(id=${categoria.id})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
+					<a th:href="@{/categorias/buscar(id=${categoria.id_cat})}" class="btn btn-success btn-sm" role="button" title="Editar"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+					<a th:href="@{/categorias/eliminar(id=${categoria.id_cat})}" onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
                   </td>
-                </tr>        
+                </tr>         
               </tbody>
-              <tfloot>
-				  <tr>
-					  <td colspan="4" th:text="'Total de registros: ' +${total}"></td>
-				  </tr>
-			  </tfloot>
             </table>
-            
-				    <nav th:if="${categorias.totalPages > 0}" aria-label="Page navigation example" >
-    	<ul class="pagination justify-content-center">
-    		<li class="page-item" th:classappend="${categorias.number == 0 ? 'disabled' : ''}">
-    			<a th:href="@{/categorias/indexPaginado(page=${categorias.number - 1})}" class="page-link">Anterior</a>
-    		</li>
-    					
-    		<li class="page-item" th:classappend="${i eq categorias.number + 1} ? 'active'" th:each="i : ${#numbers.sequence( 1, categorias.totalPages, 1)}">
-    			<a class="page-link" th:href="@{/categorias/indexPaginado?page={tmpPag} (tmpPag=${i-1}) }" th:text="${i}" th:title="${'Page '+ i}" data-toggle="tooltip"></a>
-    		</li>
-    		<li class="page-item" th:classappend="${categorias.number == (categorias.totalPages - 1) ? 'disabled' : ''}">
-    			<a th:href="@{/categorias/indexPaginado(page=${categorias.number + 1})}" class="page-link">Siguiente</a>
-    		</li>
-    	</ul>
-    </nav>
-
-            
+            <tfoot>
+				  <td>
+					  <td colspan="4" th:text="'Total de registro: ' +${total}"></td>
+				  </tr>
+			  </tfoot>
           </div>
         </div>
       </div> <!-- /container -->
 
     </main>
 
-    <footer class="footer" th:insert="fragmentos/pie.html::pie">
-      
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2023 TIENDA LUCI | &middot; <a href="#">Privacy</a>
+          &middot; <a href="#">Terms</a>
+        </p>
+      </div>
     </footer>
 
     <!-- Bootstrap core JavaScript
